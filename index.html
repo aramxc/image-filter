@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Image Filter</title>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="Resources\CSS\index.css">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="Resources\Javascript\index.js"></script>
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
+  </script>
+</head>
+
+<body>
+
+<!-- Header with description -->
+  <header>
+    <h3>Simple Image Filters</h3>
+
+    <h6>Hand-crafted by <a href="github.com/aramxc">Aaron Ramirez</a></h6>
+  </header>
+<hr class="minor">
+  <!-- Container canvas -->
+  <p>Step one: upload an image.</p>
+  <input type="file" multiple="false" accept="image/*" id = "fileinput" onchange="upload()">
+<br>
+<br>
+  <div class="canvas-container">
+
+    <canvas id="canvas" width="400px" height="400px"></canvas>
+</div>
+<br>
+<div id="dim-output"></div>
+<hr class="minor">
+
+  <!-- Container for buttons and checkboxes-->
+  <p>Step two: apply image filters.</p>
+<div class="flex">
+  <div class="checkbox-container">
+       <h4>Style</h4>
+  <input type="checkbox" id = "filter1"> Filter 1<br>
+ <input type="checkbox" id = "filter2"> Filter 2<br>
+
+ </div>
+
+ <div class="checkbox-container">
+   <h4>Color</h4>
+   <input type="checkbox" id = "filter3"> Filter 3<br>
+  <input type="checkbox" id = "filter4"> Filter 4<br>
+
+</div>
+
+<div class="checkbox-container">
+     <h4>Misc.</h4>
+  <input type="checkbox" id = "filter5"> Filter 5<br>
+  <input type="checkbox" id = "filter6"> Filter 6<br>
+
+</div>
+ </div>
+ <hr class="minor">
+
+<!-- Submit, save, and reset buttons -->
+ <p>Step three: reset or save your image.</p>
+ <div class="flex">
+   <div class="button-container">
+     <input type="button" id = "reset" value="Reset">
+     <input type="button" id = "save" value="Save">
+   </div>
+ </div>
+</body>
+
+</html>
