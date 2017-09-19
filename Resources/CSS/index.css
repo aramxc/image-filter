@@ -1197,6 +1197,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 /*------------------------- END RESPONSIVE STYLES HERE---------------------------*/
 
+
 /* Basic */
 
 @-ms-viewport {
@@ -1365,7 +1366,7 @@ margin-left: 10%;
   -moz-justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
-  justify-content: space-between;
+  justify-content: center;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -1385,13 +1386,23 @@ canvas {
 
 }
 
+#backupCanvas {
+display: none;
+
+}
+
 .checkbox-container {
-width: 33%;
+width: 25%;
 background-color: white;
 text-align: left;
 border: 1px dashed gray;
 padding: 10px;
+margin: 0 2%;
 
+}
+
+.checkbox-container h1 {
+text-align: center;
 
 }
 
