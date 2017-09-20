@@ -1,3 +1,6 @@
+//TODO: Add save functionality
+//TODO: Allow uncheck to reset image to previous state
+
 // Global variables, initiate each filter as null
 var originalImage = null;
 var grayImage = null;
