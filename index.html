@@ -23,18 +23,18 @@
     <section id="landing">
       <h3>Simple Image Filters</h3>
 
-      <h6> Created by <a href="github.com/aramxc">Aaron Ramirez</a></h6>
+      <h6> Created by <a href="aramxc.github.io">Aaron Ramirez</a></h6>
   </header>
   <hr class="minor">
   <!-- Container canvas -->
-  <h4>Step one: upload an image.</h4>
-  <input type="file" multiple="false" accept="image/*" id="fileinput" onchange="upload()">
+  <h4>Upload an image.</h4>
+  <input type="file" multiple="false" accept="image/*" id="fileInput" onchange="upload()">
   <br>
   <br>
   <div class="canvas-container">
 
     <canvas id="canvas" width="400px" height="400px"></canvas>
-      <canvas id="backupCanvas" width="400px" height="400px"></canvas>
+
   </div>
   <br>
   <div id="dim-output"></div>
@@ -42,23 +42,24 @@
   </section>
   <!-- Container for buttons and checkboxes-->
   <section id="filters">
-    <h4>Step two: apply image filters.</h4>
+    <h4>Apply image filters.</h4>
     <p>More filters coming soon!</p>
     <div class="flex">
       <div class="checkbox-container">
         <h1><strong>Color</strong></h1>
-        <input type="checkbox" id="grayScale" onchange="grayScale()"> Grayscale<br>
-        <input type="checkbox" id="betterGrayScale" onchange="betterGrayScale()"> Better Grayscale<br>
-        <input type="checkbox" id="sepia" onchange="sepia()"> Sepia<br>
-
+        <input type="checkbox" id="grayScale" onchange="doGray()"> Grayscale<br>
+        <input type="checkbox" id="betterGrayScale" onchange="doBetterGray()"> Better Grayscale<br>
+        <input type="checkbox" id="sepia" onchange="doSepia()"> Sepia<br>
+        <input type="checkbox" id="red" onchange="doRed()"> Red<br>
       </div>
 
 
 
       <div class="checkbox-container">
         <h1><strong>Effects</strong></h1>
-          <input type="checkbox" id="noise" onchange="noise()"> Noise<br>
-          <input type="checkbox" id="negative" onchange="negative()"> Negative<br>
+          <input type="checkbox" id="noise" onchange="doNoise()"> Noise<br>
+          <input type="checkbox" id="negative" onchange="doNegative()"> Negative<br>
+          <input type="checkbox" id="rainbow" onchange="doRainbow()"> Rainbow<br>
 
       </div>
     </div>
@@ -67,13 +68,16 @@
 
   <!-- Submit, save, and reset buttons -->
   <section id="footer">
-    <h4>Step three: reset or save your image.</h4>
+    <h4>Reset or save your image.</h4>
     <div class="flex">
       <div class="button-container">
-        <input type="button" id="reset" value="Reset" onchange="resetImage()">
-        <input type="button" id="save" value="Save">
+        <input type="button" id="reset" value="Reset" onclick="resetImage()">
+        <input type="button" id="save" value="Save" onclick = "saveImage()" download = "my-filtered-image.png" >
+
       </div>
     </div>
+    <hr class="minor">
+    <h6> Created by <a href="aramxc.github.io">Aaron Ramirez</a></h6>
   </section>
 </body>
 
